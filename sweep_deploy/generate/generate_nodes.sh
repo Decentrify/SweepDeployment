@@ -25,6 +25,6 @@ do
   HTTP_PORT=`expr ${HTTP_START_PORT} + ${i} + ${i}`
   HTTP_ADMIN_PORT=`expr ${HTTP_START_PORT} + ${i} + ${i} + 1`
   ${HOME_DIR}/generate_yml.sh ${NODE_DIR}/etc ${HTTP_PORT} ${HTTP_ADMIN_PORT} ${LOGGERS} ${REMOTE_GEN_DIR}/node${i}/var
-  NODE_SEED=`expr ${SEED} + ${i}`
+  NODE_SEED=`expr ${SEED} + 10 \* ${i}`
   ${HOME_DIR}/generate_config.sh ${NODE_DIR}/etc ${NODE_SEED} ${SELF_IP} ${SELF_PORT} $@ ${REMOTE_GEN_DIR}/node${i}/etc/sweep_ws.yml
 done

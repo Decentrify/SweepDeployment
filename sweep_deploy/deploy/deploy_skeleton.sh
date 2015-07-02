@@ -16,7 +16,7 @@ do
   M_NODES=M${i}_NODES
   M_SWEEP_PORT=M${i}_SWEEP_PORT
   M_HTTP_PORT=M${i}_HTTP_PORT
-  M_SEED=`expr ${SEED} + ${i}`
+  M_SEED=`expr ${SEED} + 10000 \* ${i}`
 
   rm -rf ${HOME_DIR}/skeleton
   mkdir ${HOME_DIR}/skeleton
