@@ -1,0 +1,13 @@
+http: 
+  port: 31004
+  adminPort: 31005
+logging: 
+  level: WARN
+  loggers: 
+    "se.sics.gvod.croupier.Croupier": WARN
+  console:
+    enabled: false
+  file: 
+    enabled: true
+    archive: false
+    currentLogFilename: /home/sweep/deploy_test/sweep/nodes/node2/var/sweep_ws.log
