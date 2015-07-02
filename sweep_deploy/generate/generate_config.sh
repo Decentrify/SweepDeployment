@@ -10,6 +10,9 @@ touch ${GEN_DIR}/application.conf
 echo "system.seed="$2 >> ${GEN_DIR}/application.conf
 echo "system.self.ip=\""$3"\"" >> ${GEN_DIR}/application.conf
 echo "system.self.port="$4 >> ${GEN_DIR}/application.conf
+if [ $3 == $5 ] && [ $4 -eq $6 ]; then
+    echo "system.self.id=0" >> ${GEN_DIR}/application.conf
+fi
 echo "system.bootstrap.nodes=[\"bootNode\"]" >> ${GEN_DIR}/application.conf
 echo "system.bootstrap.bootNode.ip=\""$5"\"" >> ${GEN_DIR}/application.conf
 echo "system.bootstrap.bootNode.port="$6 >> ${GEN_DIR}/application.conf
